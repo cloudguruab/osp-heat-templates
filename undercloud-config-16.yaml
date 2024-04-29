@@ -57,7 +57,7 @@ resources:
             content: {get_file: deploy-templates/vip-data-default.yaml}
           - path: /home/stack/overcloud-environment.yaml
             permissions: '0644'
-            content: {get_file: deploy-templates/overcloud-environment-16.yaml}
+            content: {get_file: deploy-templates/overcloud-environment.yaml} # copy/use -16.yaml to fix error
           - path: /home/stack/network-config-update.yaml
             permissions: '0644'
             content: {get_file: deploy-templates/network-config-update.yaml}

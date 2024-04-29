@@ -109,9 +109,9 @@ resources:
     properties:
       network: {get_resource: DeployNetwork}
       allocation_pools:
-        - start: 172.16.1.1
-          end: 172.16.1.200
-      cidr: 172.16.1.0/24
+        - start: 172.14.1.1
+          end: 172.14.1.200
+      cidr: 172.14.1.0/24
       enable_dhcp: false
       gateway_ip: null
 
@@ -120,9 +120,9 @@ resources:
     properties:
       network: {get_resource: DeployNetwork}
       allocation_pools:
-        - start: 172.16.3.1
-          end: 172.16.3.200
-      cidr: 172.16.3.0/24
+        - start: 172.14.3.1
+          end: 172.14.3.200
+      cidr: 172.14.3.0/24
       enable_dhcp: false
       gateway_ip: null
 
@@ -131,9 +131,9 @@ resources:
     properties:
       network: {get_resource: DeployNetwork}
       allocation_pools:
-        - start: 172.16.2.1
-          end: 172.16.2.200
-      cidr: 172.16.2.0/24
+        - start: 172.14.2.1
+          end: 172.14.2.200
+      cidr: 172.14.2.0/24
       enable_dhcp: false
       gateway_ip: null
 
@@ -142,9 +142,9 @@ resources:
     properties:
       network: {get_resource: DeployNetwork}
       allocation_pools:
-        - start: 172.16.0.1
-          end: 172.16.0.200
-      cidr: 172.16.0.0/24
+        - start: 172.14.0.1
+          end: 172.14.0.200
+      cidr: 172.14.0.0/24
       enable_dhcp: false
       gateway_ip: null
 
@@ -153,9 +153,9 @@ resources:
     properties:
       network: {get_resource: DeployNetwork}
       allocation_pools:
-        - start: 10.0.0.2
-          end: 10.0.0.200
-      cidr: 10.0.0.0/24
+        - start: 10.16.0.2
+          end: 10.16.0.200
+      cidr: 10.16.0.0/24
       enable_dhcp: false
       gateway_ip: null
 
@@ -164,10 +164,10 @@ resources:
     properties:
       network: {get_resource: ManagementNetwork}
       allocation_pools:
-        - start: 10.98.0.2
-          end: 10.98.0.200
+        - start: 10.68.0.2
+          end: 10.68.0.200
       enable_dhcp: true
-      cidr: 10.98.0.0/24
+      cidr: 10.68.0.0/24
 
   FloatingRouter:
     type: OS::Neutron::Router
@@ -326,7 +326,7 @@ resources:
     properties:
       network: {get_resource: ManagementNetwork}
       fixed_ips:
-        - ip_address: 10.98.0.5
+        - ip_address: 10.68.0.5
           subnet: {get_resource: ManagementSubnet}
 
   DeployPort:
@@ -342,7 +342,7 @@ resources:
     properties:
       network: {get_resource: DeployNetwork}
       fixed_ips:
-        - ip_address: 10.0.0.5
+        - ip_address: 10.16.0.5
           subnet: {get_resource: DeployExternalSubnet}
 
   InternalApiPort:
@@ -350,7 +350,7 @@ resources:
     properties:
       network: {get_resource: DeployNetwork}
       fixed_ips:
-        - ip_address: 172.16.2.180
+        - ip_address: 172.14.2.180
           subnet: {get_resource: DeployInternalApiSubnet}
 
   # Not actually associated with the Undercloud server, resource is just here to

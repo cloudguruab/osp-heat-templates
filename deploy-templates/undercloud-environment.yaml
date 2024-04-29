@@ -16,5 +16,5 @@ parameter_defaults:
         chain:     'POSTROUTING'
         jump:      'MASQUERADE'
         action:    'append'
-        source:    '10.0.0.0/24'
-        dest:      '!10.0.0.0/24'
+        source:    '10.16.0.0/24'
+        dest:      '!10.16.0.0/24'
