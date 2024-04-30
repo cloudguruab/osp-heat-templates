@@ -4,88 +4,88 @@
   mtu: 1500
   subnets:
     storage_subnet:
-      ip_subnet: 172.16.1.0/24
-      allocation_pools:
-        - start: 172.16.1.4
-          end: 172.16.1.250
-    storage_subnet1:
       ip_subnet: 172.17.1.0/24
       allocation_pools:
         - start: 172.17.1.4
           end: 172.17.1.250
-    storage_subnet2:
+    storage_subnet1:
       ip_subnet: 172.18.1.0/24
       allocation_pools:
         - start: 172.18.1.4
           end: 172.18.1.250
+    storage_subnet2:
+      ip_subnet: 172.19.1.0/24
+      allocation_pools:
+        - start: 172.19.1.4
+          end: 172.19.1.250
 - name: StorageMgmt
   name_lower: storage_mgmt
   vip: true
   mtu: 1500
   subnets:
     storage_mgmt_subnet:
-      ip_subnet: 172.16.3.0/24
-      allocation_pools:
-        - start: 172.16.3.4
-          end: 172.16.3.250
-    storage_mgmt_subnet1:
       ip_subnet: 172.17.3.0/24
       allocation_pools:
         - start: 172.17.3.4
           end: 172.17.3.250
-    storage_mgmt_subnet2:
+    storage_mgmt_subnet1:
       ip_subnet: 172.18.3.0/24
       allocation_pools:
         - start: 172.18.3.4
           end: 172.18.3.250
+    storage_mgmt_subnet2:
+      ip_subnet: 172.19.3.0/24
+      allocation_pools:
+        - start: 172.19.3.4
+          end: 172.19.3.250
 - name: InternalApi
   name_lower: internal_api
   vip: true
   mtu: 1500
   subnets:
     internal_api_subnet:
-      ip_subnet: 172.16.2.0/24
-      allocation_pools:
-        - start: 172.16.2.4
-          end: 172.16.2.250
-    internal_api_subnet1:
       ip_subnet: 172.17.2.0/24
       allocation_pools:
         - start: 172.17.2.4
           end: 172.17.2.250
-    internal_api_subnet2:
+    internal_api_subnet1:
       ip_subnet: 172.18.2.0/24
       allocation_pools:
         - start: 172.18.2.4
           end: 172.18.2.250
+    internal_api_subnet2:
+      ip_subnet: 172.19.2.0/24
+      allocation_pools:
+        - start: 172.19.2.4
+          end: 172.19.2.250
 - name: Tenant
   vip: false  # Tenant network does not use VIPs
   mtu: 1500
   name_lower: tenant
   subnets:
     tenant_subnet:
-      ip_subnet: 172.16.0.0/24
-      allocation_pools:
-        - start: 172.16.0.4
-          end: 172.16.0.250
-    tenant_subnet1:
       ip_subnet: 172.17.0.0/24
       allocation_pools:
         - start: 172.17.0.4
           end: 172.17.0.250
-    tenant_subnet2:
+    tenant_subnet1:
       ip_subnet: 172.18.0.0/24
       allocation_pools:
         - start: 172.18.0.4
           end: 172.18.0.250
+    tenant_subnet2:
+      ip_subnet: 172.19.0.0/24
+      allocation_pools:
+        - start: 172.19.0.4
+          end: 172.19.0.250
 - name: External
   name_lower: external
   vip: true
   mtu: 1500
   subnets:
     external_subnet:
-      ip_subnet: 10.0.0.0/24
+      ip_subnet: 10.7.0.0/24
       allocation_pools:
-        - start: 10.0.0.10
-          end: 10.0.0.250
-      gateway_ip: 10.0.0.5
+        - start: 10.7.0.10
+          end: 10.7.0.250
+      gateway_ip: 10.7.0.5
