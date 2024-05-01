@@ -93,7 +93,10 @@ resources:
             content: {get_file: deploy-scripts/06-external-compute.sh}
           - path: /home/stack/deploy.sh
             permissions: '0755'
-            content: {get_file: deploy-scripts/deploy.sh}
+            content: {get_file: deploy-scripts/reboot.sh}
+          - path: /home/stack/reboot.sh
+            permissions: '0755'
+            content: {get_file: deploy-scripts/reboot.sh}
           - path: /home/stack/overcloud-baremetal-deploy.yaml
             permissions: '0644'
             content:
