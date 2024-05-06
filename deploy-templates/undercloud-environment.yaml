@@ -7,8 +7,8 @@ parameter_defaults:
         chain:     'POSTROUTING'
         jump:      'MASQUERADE'
         action:    'append'
-        source:    '192.168.24.0/24'
-        dest:      '!192.168.24.0/24'
+        source:    '192.178.24.0/24'
+        dest:      '!192.178.24.0/24'
     '001 masquerade external traffic':
         ipversion: 'ipv4'
         proto:     'all'
@@ -16,5 +16,5 @@ parameter_defaults:
         chain:     'POSTROUTING'
         jump:      'MASQUERADE'
         action:    'append'
-        source:    '10.0.0.0/24'
-        dest:      '!10.0.0.0/24'
+        source:    '10.7.0.0/24'
+        dest:      '!10.7.0.0/24'
