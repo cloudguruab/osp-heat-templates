@@ -1,3 +1,3 @@
 - network: ctlplane
-  dns_name: overcloud
+  dns_name: overcloud16
   ip_address: 192.168.24.15
